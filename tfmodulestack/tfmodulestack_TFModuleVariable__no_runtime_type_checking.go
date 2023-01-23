@@ -21,6 +21,10 @@ func validateTFModuleVariable_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTFModuleVariable_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func validateNewTFModuleVariableParameters(scope constructs.Construct, name *string, config *cdktf.TerraformVariableConfig) error {
 	return nil
 }

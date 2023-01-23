@@ -3,10 +3,10 @@ package tfmodulestack
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/jsii"
+	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/internal"
+	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -273,17 +273,36 @@ func TFModuleOutput_IsConstruct(x interface{}) *bool {
 }
 
 // Experimental.
-func TFModuleOutput_IsTerrafromOutput(x interface{}) *bool {
+func TFModuleOutput_IsTerraformElement(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateTFModuleOutput_IsTerrafromOutputParameters(x); err != nil {
+	if err := validateTFModuleOutput_IsTerraformElementParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
 		"@cdktf/tf-module-stack.TFModuleOutput",
-		"isTerrafromOutput",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func TFModuleOutput_IsTerraformOutput(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateTFModuleOutput_IsTerraformOutputParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/tf-module-stack.TFModuleOutput",
+		"isTerraformOutput",
 		[]interface{}{x},
 		&returns,
 	)

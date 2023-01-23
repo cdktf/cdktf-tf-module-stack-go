@@ -51,6 +51,14 @@ func validateTFModuleVariable_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTFModuleVariable_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateNewTFModuleVariableParameters(scope constructs.Construct, name *string, config *cdktf.TerraformVariableConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")

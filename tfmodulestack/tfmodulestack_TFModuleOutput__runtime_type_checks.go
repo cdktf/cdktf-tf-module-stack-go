@@ -40,7 +40,15 @@ func validateTFModuleOutput_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateTFModuleOutput_IsTerrafromOutputParameters(x interface{}) error {
+func validateTFModuleOutput_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateTFModuleOutput_IsTerraformOutputParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}

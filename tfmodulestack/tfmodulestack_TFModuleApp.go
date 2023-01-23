@@ -3,10 +3,10 @@ package tfmodulestack
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/jsii"
+	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/internal"
+	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -93,7 +93,7 @@ func (j *jsiiProxy_TFModuleApp) TargetStackId() *string {
 }
 
 
-func NewTFModuleApp(options *cdktf.AppOptions) TFModuleApp {
+func NewTFModuleApp(options *cdktf.AppConfig) TFModuleApp {
 	_init_.Initialize()
 
 	if err := validateNewTFModuleAppParameters(options); err != nil {
@@ -110,7 +110,7 @@ func NewTFModuleApp(options *cdktf.AppOptions) TFModuleApp {
 	return &j
 }
 
-func NewTFModuleApp_Override(t TFModuleApp, options *cdktf.AppOptions) {
+func NewTFModuleApp_Override(t TFModuleApp, options *cdktf.AppConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(

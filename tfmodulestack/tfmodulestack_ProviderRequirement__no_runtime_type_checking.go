@@ -17,6 +17,14 @@ func validateProviderRequirement_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateProviderRequirement_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateProviderRequirement_IsTerraformProviderParameters(x interface{}) error {
+	return nil
+}
+
 func validateNewProviderRequirementParameters(scope constructs.Construct, providerName *string) error {
 	return nil
 }

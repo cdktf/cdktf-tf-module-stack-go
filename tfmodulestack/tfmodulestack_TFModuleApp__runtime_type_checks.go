@@ -52,7 +52,7 @@ func validateTFModuleApp_OfParameters(construct constructs.IConstruct) error {
 	return nil
 }
 
-func validateNewTFModuleAppParameters(options *cdktf.AppOptions) error {
+func validateNewTFModuleAppParameters(options *cdktf.AppConfig) error {
 	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
 		return err
 	}

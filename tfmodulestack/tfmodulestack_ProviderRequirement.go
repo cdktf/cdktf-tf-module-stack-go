@@ -3,10 +3,10 @@ package tfmodulestack
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/jsii"
+	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/internal"
+	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -221,6 +221,44 @@ func ProviderRequirement_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/tf-module-stack.ProviderRequirement",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func ProviderRequirement_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateProviderRequirement_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/tf-module-stack.ProviderRequirement",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func ProviderRequirement_IsTerraformProvider(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateProviderRequirement_IsTerraformProviderParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/tf-module-stack.ProviderRequirement",
+		"isTerraformProvider",
 		[]interface{}{x},
 		&returns,
 	)
