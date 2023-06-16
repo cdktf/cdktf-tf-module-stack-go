@@ -1,3 +1,4 @@
+// A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct
 package tfmodulestack
 
 import (

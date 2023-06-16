@@ -1,6 +1,5 @@
 //go:build !no_runtime_type_checking
 
-// A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct
 package tfmodulestack
 
 import (
