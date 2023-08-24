@@ -36,13 +36,13 @@ func (t *jsiiProxy_TFModuleStack) validateAllocateLogicalIdParameters(tfElement 
 		return fmt.Errorf("parameter tfElement is required, but nil was provided")
 	}
 	switch tfElement.(type) {
-	case cdktf.TerraformElement:
-		// ok
 	case constructs.Node:
+		// ok
+	case cdktf.TerraformElement:
 		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(tfElement) {
-			return fmt.Errorf("parameter tfElement must be one of the allowed types: cdktf.TerraformElement, constructs.Node; received %#v (a %T)", tfElement, tfElement)
+			return fmt.Errorf("parameter tfElement must be one of the allowed types: constructs.Node, cdktf.TerraformElement; received %#v (a %T)", tfElement, tfElement)
 		}
 	}
 
@@ -62,13 +62,13 @@ func (t *jsiiProxy_TFModuleStack) validateGetLogicalIdParameters(tfElement inter
 		return fmt.Errorf("parameter tfElement is required, but nil was provided")
 	}
 	switch tfElement.(type) {
-	case cdktf.TerraformElement:
-		// ok
 	case constructs.Node:
+		// ok
+	case cdktf.TerraformElement:
 		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(tfElement) {
-			return fmt.Errorf("parameter tfElement must be one of the allowed types: cdktf.TerraformElement, constructs.Node; received %#v (a %T)", tfElement, tfElement)
+			return fmt.Errorf("parameter tfElement must be one of the allowed types: constructs.Node, cdktf.TerraformElement; received %#v (a %T)", tfElement, tfElement)
 		}
 	}
 

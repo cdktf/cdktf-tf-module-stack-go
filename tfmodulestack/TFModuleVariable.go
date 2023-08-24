@@ -60,6 +60,9 @@ type TFModuleVariable interface {
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
+	//
+	// Returns: a string token referencing the value of this variable.
+	// Experimental.
 	ToString() *string
 	ToTerraform() interface{}
 }

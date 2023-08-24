@@ -24,6 +24,10 @@ func validateTFModuleOutput_IsTerraformOutputParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_TFModuleOutput) validateSetPreconditionParameters(val *cdktf.Precondition) error {
+	return nil
+}
+
 func (j *jsiiProxy_TFModuleOutput) validateSetStaticIdParameters(val *bool) error {
 	return nil
 }

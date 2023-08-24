@@ -30,6 +30,10 @@ type TFModuleOutput interface {
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
+	Precondition() *cdktf.Precondition
+	// Experimental.
+	SetPrecondition(val *cdktf.Precondition)
+	// Experimental.
 	RawOverrides() interface{}
 	// Experimental.
 	Sensitive() *bool
@@ -135,6 +139,16 @@ func (j *jsiiProxy_TFModuleOutput) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_TFModuleOutput) Precondition() *cdktf.Precondition {
+	var returns *cdktf.Precondition
+	_jsii_.Get(
+		j,
+		"precondition",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TFModuleOutput) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -215,6 +229,17 @@ func (j *jsiiProxy_TFModuleOutput)SetDescription(val *string) {
 	_jsii_.Set(
 		j,
 		"description",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TFModuleOutput)SetPrecondition(val *cdktf.Precondition) {
+	if err := j.validateSetPreconditionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"precondition",
 		val,
 	)
 }

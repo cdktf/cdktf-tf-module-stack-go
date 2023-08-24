@@ -55,6 +55,14 @@ func validateTFModuleOutput_IsTerraformOutputParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_TFModuleOutput) validateSetPreconditionParameters(val *cdktf.Precondition) error {
+	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_TFModuleOutput) validateSetStaticIdParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
