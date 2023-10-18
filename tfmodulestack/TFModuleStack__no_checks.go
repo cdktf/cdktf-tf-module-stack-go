@@ -48,6 +48,10 @@ func (j *jsiiProxy_TFModuleStack) validateSetDependenciesParameters(val *[]cdktf
 	return nil
 }
 
+func (j *jsiiProxy_TFModuleStack) validateSetMoveTargetsParameters(val cdktf.TerraformResourceTargets) error {
+	return nil
+}
+
 func (j *jsiiProxy_TFModuleStack) validateSetSynthesizerParameters(val cdktf.IStackSynthesizer) error {
 	return nil
 }

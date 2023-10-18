@@ -2,10 +2,10 @@ package tfmodulestack
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v3/internal"
+	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v4/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -15,6 +15,10 @@ type TFModuleStack interface {
 	Dependencies() *[]cdktf.TerraformStack
 	// Experimental.
 	SetDependencies(val *[]cdktf.TerraformStack)
+	// Experimental.
+	MoveTargets() cdktf.TerraformResourceTargets
+	// Experimental.
+	SetMoveTargets(val cdktf.TerraformResourceTargets)
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -64,6 +68,16 @@ func (j *jsiiProxy_TFModuleStack) Dependencies() *[]cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"dependencies",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TFModuleStack) MoveTargets() cdktf.TerraformResourceTargets {
+	var returns cdktf.TerraformResourceTargets
+	_jsii_.Get(
+		j,
+		"moveTargets",
 		&returns,
 	)
 	return returns
@@ -126,6 +140,17 @@ func (j *jsiiProxy_TFModuleStack)SetDependencies(val *[]cdktf.TerraformStack) {
 	_jsii_.Set(
 		j,
 		"dependencies",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TFModuleStack)SetMoveTargets(val cdktf.TerraformResourceTargets) {
+	if err := j.validateSetMoveTargetsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"moveTargets",
 		val,
 	)
 }

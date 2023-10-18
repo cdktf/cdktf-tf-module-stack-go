@@ -123,6 +123,14 @@ func (j *jsiiProxy_TFModuleStack) validateSetDependenciesParameters(val *[]cdktf
 	return nil
 }
 
+func (j *jsiiProxy_TFModuleStack) validateSetMoveTargetsParameters(val cdktf.TerraformResourceTargets) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_TFModuleStack) validateSetSynthesizerParameters(val cdktf.IStackSynthesizer) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

@@ -99,6 +99,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "dependsOn", GoMethod: "DependsOn"},
 			_jsii_.MemberMethod{JsiiMethod: "ensureBackendExists", GoMethod: "EnsureBackendExists"},
 			_jsii_.MemberMethod{JsiiMethod: "getLogicalId", GoMethod: "GetLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "moveTargets", GoGetter: "MoveTargets"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "prepareStack", GoMethod: "PrepareStack"},
 			_jsii_.MemberMethod{JsiiMethod: "registerIncomingCrossStackReference", GoMethod: "RegisterIncomingCrossStackReference"},
