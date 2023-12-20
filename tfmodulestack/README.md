@@ -71,8 +71,8 @@ import {
   TFModuleVariable,
   TFModuleOutput,
   ProviderRequirement,
-} from "cdktf-tf-module-stack";
-import { Resource } from "@cdktf/provider-null";
+} from "@cdktf/tf-module-stack";
+import { Resource } from '@cdktf/provider-null/lib/resource';
 
 class MyAwesomeModule extends TFModuleStack {
   constructor(scope: Construct, id: string) {
