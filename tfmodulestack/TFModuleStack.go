@@ -2,10 +2,10 @@ package tfmodulestack
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v4/jsii"
+	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v5/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v4/internal"
+	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v5/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -45,6 +45,8 @@ type TFModuleStack interface {
 	// Experimental.
 	GetLogicalId(tfElement interface{}) *string
 	// Experimental.
+	HasResourceMove() *bool
+	// Experimental.
 	PrepareStack()
 	// Experimental.
 	RegisterIncomingCrossStackReference(fromStack cdktf.TerraformStack) cdktf.TerraformRemoteState
@@ -53,6 +55,8 @@ type TFModuleStack interface {
 	// Run all validations on the stack.
 	// Experimental.
 	RunAllValidations()
+	// Experimental.
+	ToHclTerraform() *map[string]interface{}
 	// Returns a string representation of this construct.
 	ToString() *string
 	ToTerraform() interface{}
@@ -322,6 +326,19 @@ func (t *jsiiProxy_TFModuleStack) GetLogicalId(tfElement interface{}) *string {
 	return returns
 }
 
+func (t *jsiiProxy_TFModuleStack) HasResourceMove() *bool {
+	var returns *bool
+
+	_jsii_.Invoke(
+		t,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (t *jsiiProxy_TFModuleStack) PrepareStack() {
 	_jsii_.InvokeVoid(
 		t,
@@ -368,6 +385,19 @@ func (t *jsiiProxy_TFModuleStack) RunAllValidations() {
 		"runAllValidations",
 		nil, // no parameters
 	)
+}
+
+func (t *jsiiProxy_TFModuleStack) ToHclTerraform() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		t,
+		"toHclTerraform",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (t *jsiiProxy_TFModuleStack) ToString() *string {

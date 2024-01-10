@@ -2,15 +2,17 @@ package tfmodulestack
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v4/jsii"
+	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v5/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v4/internal"
+	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v5/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
 type TFModuleApp interface {
 	cdktf.App
+	// Experimental.
+	HclOutput() *bool
 	// Experimental.
 	Manifest() cdktf.Manifest
 	// The tree node.
@@ -42,6 +44,16 @@ type TFModuleApp interface {
 // The jsii proxy struct for TFModuleApp
 type jsiiProxy_TFModuleApp struct {
 	internal.Type__cdktfApp
+}
+
+func (j *jsiiProxy_TFModuleApp) HclOutput() *bool {
+	var returns *bool
+	_jsii_.Get(
+		j,
+		"hclOutput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_TFModuleApp) Manifest() cdktf.Manifest {
