@@ -2,10 +2,10 @@ package tfmodulestack
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v5/internal"
+	"github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack/v6/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -172,8 +172,21 @@ func (j *jsiiProxy_TFModuleStack)SetSynthesizer(val cdktf.IStackSynthesizer) {
 
 // Checks if `x` is a construct.
 //
+// Use this method instead of `instanceof` to properly detect `Construct`
+// instances, even when the construct library is symlinked.
+//
+// Explanation: in JavaScript, multiple copies of the `constructs` library on
+// disk are seen as independent, completely different libraries. As a
+// consequence, the class `Construct` in each copy of the `constructs` library
+// is seen as a different class, and an instance of one class will not test as
+// `instanceof` the other class. `npm install` will not create installations
+// like this, but users may manually symlink construct libraries together or
+// use a monorepo tool: in those cases, multiple copies of the `constructs`
+// library can be accidentally installed, and `instanceof` will behave
+// unpredictably. It is safest to avoid using `instanceof`, and using
+// this type-testing method instead.
+//
 // Returns: true if `x` is an object created from a class which extends `Construct`.
-// Deprecated: use `x instanceof Construct` instead.
 func TFModuleStack_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
